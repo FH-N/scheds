@@ -4,6 +4,7 @@ import {
   IconInbox,
   IconSettings,
 } from "@tabler/icons-react";
+import Link from "next/link";
 
 export default function SideNav() {
   return (
@@ -29,7 +30,9 @@ export default function SideNav() {
             <span>Schedules</span>
           </label>
           <div className="collapse-content space-y-1 ml-6 peer-checked:block hidden text-lg">
-            <p className="hover:text-customOrange cursor-pointer">Generate</p>
+            <Link href={"/schedule/generate"}>
+              <p className="hover:text-customOrange cursor-pointer">Generate</p>
+            </Link>
             <p className="hover:text-customOrange cursor-pointer">
               View Schedule
             </p>

@@ -10,8 +10,8 @@ export default function NavBar() {
           <Link href={"/"}>
             <Image
               src={"/assets/logo-new.png"}
-              width={60}
-              height={60}
+              width={75}
+              height={75}
               alt="scheds icon"
               className="px-4"
             />

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import LandingOptions from "./components/LandingOptions";
 import Link from "next/link";
 

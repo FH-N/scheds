@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Signin() {
@@ -61,9 +62,11 @@ export default function Signin() {
           </label>
         </div>
 
-        <button className="btn w-full bg-customNavy text-white py-2 rounded-xl">
-          Sign In
-        </button>
+        <Link href={"/dashboard"}>
+          <button className="btn w-full bg-customNavy text-white py-2 rounded-xl">
+            Sign In
+          </button>
+        </Link>
       </div>
     </div>
   );
