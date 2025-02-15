@@ -10,9 +10,9 @@ export default function Home() {
           <h2 className="text-6xl text-customOrange font-semibold pb-6">
             Your time, your way.
           </h2>
-          <Link href={"/signin"}>
+          <Link href={"/login"}>
             <button className="btn btn-lg bg-customNavy text-white ">
-              Sign Up
+              Log In
             </button>
           </Link>
         </div>

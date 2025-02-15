@@ -1,8 +1,18 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import ThemeController from "./ThemeController";
+import { useRouter } from "next/navigation";
 
 export default function NavBar() {
+  const router = useRouter();
+
+  async function logout() {
+    await fetch("/api/auth/logout", { method: "POST", credentials: "include" });
+    router.push("/login");
+  }
+
   return (
     <div className="fixed top-0 w-full z-[999] bg-foreground py-2 dark:bg-customDarkNavy shadow-sm">
       <nav className="flex items-center justify-between w-full font-medium px-10">
@@ -26,6 +36,9 @@ export default function NavBar() {
           </div>
         </div>
         <ThemeController />
+        <button onClick={logout} className="text-black">
+          Logout
+        </button>
       </nav>
     </div>
   );
