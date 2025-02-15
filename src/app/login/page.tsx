@@ -33,8 +33,12 @@ export default function Signin() {
       console.log("Login successful:", data);
 
       router.push("/dashboard");
-    } catch (error: any) {
-      setError(error.message);
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        console.error(error.message);
+      } else {
+        console.error("An unknown error occurred");
+      }
     } finally {
       setLoading(false);
     }
